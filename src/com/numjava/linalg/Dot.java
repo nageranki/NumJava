@@ -5,6 +5,7 @@ public class Dot {
             if (array1.length == 0|| array2.length == 0 ){
                 return 0 ;
             }
+            // Hi this is a test comment.
             if (array1.length != array2.length) {
                 throw new IllegalArgumentException("Arrays must be of same length ");
             }

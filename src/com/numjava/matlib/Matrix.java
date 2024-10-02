@@ -1,6 +1,6 @@
 package com.numjava.matlib;
 import java.util.Scanner;
-
+//testcheck
 public class Matrix {
     public static int[][] matrix(String input) {
         String[] rows = input.split(";");

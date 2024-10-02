@@ -1,4 +1,4 @@
 package com.numjava.strings;
 
 public class Multiply {
-}//hello
+}//hello hi

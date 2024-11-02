@@ -82,5 +82,6 @@ public class Main {
         // Test ItemSize class
         System.out.println("Item size of array elements: " + ItemSize.itemsize(array1) + " bytes");
 
+
     }
 }

@@ -1,8 +1,5 @@
-import com.numjava.NDArray.Any;
-import com.numjava.NDArray.NDArray;
-import com.numjava.NDArray.Reshape;
-import com.numjava.NDArray.Round;
 import com.numjava.matlib.Matrix;
+import com.numjava.NDArray.*;
 
 import java.util.Scanner;
 
@@ -63,6 +60,27 @@ public class Main {
         System.out.println("All elements non-zero: " + allNonZero);
         System.out.println("Index of maximum element: (" + maxIndex[0] + ", " + maxIndex[1] + ")");
         System.out.println("Index of minimum element: (" + minIndex[0] + ", " + minIndex[1] + ")");
+
+        // Test All class
+        NDArray array3 = new NDArray(new double[]{1, 2, 3, 0});
+        System.out.println("All elements are non-zero: " + All.all(array3));
+
+        // Test IsFinite class
+        NDArray array4 = new NDArray(new double[]{1, Double.NaN, 3, Double.POSITIVE_INFINITY});
+        boolean[] isFiniteResults = IsFinite.isfinite(array4);
+        System.out.print("Is finite results: ");
+        for (boolean result1 : isFiniteResults) {
+            System.out.print(result1 + " ");
+        }
+        System.out.println();
+
+        // Test Transpose class
+        NDArray array5 = new NDArray(new double[]{1, 2, 3, 4}, new int[]{2, 2});
+        NDArray transposedArray = Transpose.transpose(array5);
+        System.out.println("Transposed array: " + transposedArray);
+
+        // Test ItemSize class
+        System.out.println("Item size of array elements: " + ItemSize.itemsize(array1) + " bytes");
 
     }
 }

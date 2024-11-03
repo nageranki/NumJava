@@ -77,6 +77,7 @@ public class Transpose {
             System.out.print(data[i] + " ");
             if ((i + 1) % shape[shape.length - 1] == 0) {
                 System.out.println();
+
             }
         }
     }

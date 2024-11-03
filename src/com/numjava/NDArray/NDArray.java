@@ -70,6 +70,18 @@ public class NDArray {
         return data;
     }
 
+    public static void printNDArray(NDArray array) {
+        int[] shape = array.getShape();
+        double[] data = array.getData();
+        int elementsInLastDim = shape[shape.length - 1];
+        for (int i = 0; i < data.length; i++) {
+            System.out.print(data[i] + " ");
+            if ((i + 1) % elementsInLastDim == 0) {
+                System.out.println();
+            }
+        }
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();

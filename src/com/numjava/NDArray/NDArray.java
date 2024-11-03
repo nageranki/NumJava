@@ -61,6 +61,11 @@ public class NDArray {
         return shape;
     }
 
+    // Method to return the data of an array
+    public double[] getData() {
+        return data;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();

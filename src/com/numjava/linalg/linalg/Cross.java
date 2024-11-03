@@ -1,9 +1,9 @@
 package com.numjava.linalg.linalg;
 
+
 import java.util.Arrays;
 
-
-public class cross {
+public class Cross {
     public static <T extends Number> Double[] crossProduct(T[] a, T[] b) {
         if (a.length != 3 || b.length != 3) {
             throw new IllegalArgumentException("Both vectors must have exactly three components.");
@@ -20,5 +20,8 @@ public class cross {
         double cz = ax * by - ay * bx;
 
         return new Double[]{cx, cy, cz};
+    }
+    public static void printCrossProduct(Double[] crossProduct) {
+        System.out.println("Cross product: " + Arrays.toString(crossProduct));
     }
 }

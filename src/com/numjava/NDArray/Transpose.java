@@ -1,4 +1,4 @@
-import com.numjava.NDArray.*;
+package com.numjava.NDArray;
 
 // NumJava equivalent of numpy.ndarray.transpose
 public class Transpose {
@@ -44,7 +44,7 @@ public class Transpose {
         return new NDArray(transposedData, newShape);
     }
 
-    public static int[] calculateStrides(int[] shape) {
+    private static int[] calculateStrides(int[] shape) {
         int[] strides = new int[shape.length];
         int stride = 1;
         for (int i = shape.length - 1; i >= 0; i--) {
@@ -54,7 +54,7 @@ public class Transpose {
         return strides;
     }
 
-    public static int[] calculateIndices(int flatIndex, int[] strides, int[] shape) {
+    private static int[] calculateIndices(int flatIndex, int[] strides, int[] shape) {
         int[] indices = new int[shape.length];
         for (int i = 0; i < shape.length; i++) {
             indices[i] = (flatIndex / strides[i]) % shape[i];
@@ -62,7 +62,7 @@ public class Transpose {
         return indices;
     }
 
-    public static int calculateFlatIndex(int[] indices, int[] strides) {
+    private static int calculateFlatIndex(int[] indices, int[] strides) {
         int flatIndex = 0;
         for (int i = 0; i < indices.length; i++) {
             flatIndex += indices[i] * strides[i];

@@ -60,6 +60,11 @@ public class NDArray {
         return shape;
     }
 
+    // Method to set the shape of an array
+    public void setShape(int[] shape) {
+        this.shape = shape;
+    }
+
     // Method to return the data of an array
     public double[] getData() {
         return data;

@@ -18,7 +18,6 @@ public class NDArray {
         this.data = new double[size];
         System.arraycopy(initialValues, 0, this.data, 0, size);
         this.shape = new int[]{size}; // Shape based on initial values
-        // Hi, this is Nagesh
     }
 
     // Constructor for creating an NDArray with data and shape
@@ -59,6 +58,11 @@ public class NDArray {
     // Method to get the shape of the array
     public int[] getShape() {
         return shape;
+    }
+
+    // Method to return the data of an array
+    public double[] getData() {
+        return data;
     }
 
     @Override

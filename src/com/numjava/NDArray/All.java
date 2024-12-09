@@ -12,7 +12,7 @@ public class All {
 
         for (int i = 0; i < size; i++) {
             double value = array.get(i);
-            if (where == null || where[i]) {
+            if (where == null || (where.length > i && where[i])) {
                 if (value == 0.0 || Double.isNaN(value)) {
                     result = false;
                     break;
@@ -20,8 +20,12 @@ public class All {
             }
         }
 
-        if (keepdims) {
-            // Placeholder: handle reshaping dimensions as needed for reduced axes
+        if (keepdims && axis != null) {
+            int[] originalShape = array.getShape();
+            int[] newShape = new int[originalShape.length];
+            System.arraycopy(originalShape, 0, newShape, 0, originalShape.length);
+            newShape[axis] = 1;
+            array.setShape(newShape);
         }
 
         return result;

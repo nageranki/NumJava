@@ -13,7 +13,6 @@ public class Add extends StringOperation {
         }
         return result;
     }
-    // Overloaded method to append a string to each element in the array
     public String[] add(String[] array, String str) {
         String[] result = new String[array.length];
         for (int i = 0; i < array.length; i++) {

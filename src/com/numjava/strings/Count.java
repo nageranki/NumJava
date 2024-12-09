@@ -1,7 +1,7 @@
 package com.numjava.strings;
 
 public class Count extends StringOperation {
-    // Count occurrences of a substring in each string of the array
+    //Counts occurrences of a substring in each string of the array
     public int[] countOccurrences(String[] array, String substring) {
         int[] result = new int[array.length];
         for (int i = 0; i < array.length; i++) {
@@ -9,7 +9,7 @@ public class Count extends StringOperation {
         }
         return result;
     }
-    // Method to count occurrences of a substring in a single string
+    //Method to count occurrences of a substring in a single string
     public int countSubstring(String str, String substring) {
         if (substring == null || substring.isEmpty()) {
             throw new IllegalArgumentException("Substring must not be null or empty.");

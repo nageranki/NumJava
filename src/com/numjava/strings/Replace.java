@@ -1,7 +1,7 @@
 package com.numjava.strings;
 
 public class Replace extends StringOperation {
-    // Replace occurrences of a substring in each string of the array
+    //Replaces occurrences of a substring in each string of the array
     public String[] replaceSubstring(String[] array, String oldSubstring, String newSubstring) {
         String[] result = new String[array.length];
         for (int i = 0; i < array.length; i++) {
@@ -9,7 +9,7 @@ public class Replace extends StringOperation {
         }
         return result;
     }
-    // Method to replace occurrences of a substring in a single string
+    //Method to replace occurrences of a substring in a single string
     public String replace(String str, String oldSubstring, String newSubstring) {
         if (oldSubstring == null || newSubstring == null) {
             throw new IllegalArgumentException("Substrings must not be null.");

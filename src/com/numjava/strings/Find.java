@@ -1,7 +1,7 @@
 package com.numjava.strings;
 
 public class Find extends StringOperation {
-    // Find the first occurrence of a substring in each string of the array
+    //Finds the first occurrence of a substring in each string of the array
     public int[] findSubstring(String[] array, String substring) {
         int[] result = new int[array.length];
         for (int i = 0; i < array.length; i++) {
@@ -9,7 +9,7 @@ public class Find extends StringOperation {
         }
         return result;
     }
-    // Method to find the first occurrence of a substring in a single string
+    //Method to find the first occurrence of a substring in a single string
     public int find(String str, String substring) {
         if (substring == null) {
             throw new IllegalArgumentException("Substring must not be null.");

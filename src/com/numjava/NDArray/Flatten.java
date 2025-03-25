@@ -34,6 +34,7 @@ public class Flatten {
         intArray.printNDArray();
 
         // Flatten NDArray in row-major order
+        // Test Comment
         GenericNDArray<Integer> flattenedArrayC = flatten(intArray, "C");
         System.out.println("\nFlattened NDArray (row-major order):");
         flattenedArrayC.printNDArray();
